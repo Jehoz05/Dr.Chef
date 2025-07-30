@@ -1,0 +1,138 @@
+.header {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 75rem;
+}
+
+.slideshow {
+  width: 40rem;
+  height: 25rem;
+}
+
+.hero {
+  color: #ddd6cb;
+  font-size: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta a:hover,
+.cta a:active {
+  background: linear-gradient(90deg, #fd4715, #f9b241);
+}
+
+.cta a:first-child {
+  background: transparent;
+  font-weight: normal;
+  color: #ff9b05;
+  padding-left: 0;
+}
+
+.cta a:first-child:hover,
+.cta a:first-child:active {
+  background: transparent;
+  color: #f9b241;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 0 2rem 11rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  .slideshow {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+  }
+
+  .hero {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .cta a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section1 {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 24rem 0 0 3rem;
+    border: 2px solid aqua;
+    border-radius: 3rem;
+  }
+  .section2 {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 2rem 0 15rem 20rem;
+    border: 2px solid aqua;
+    border-radius: 3rem;
+  }
+}

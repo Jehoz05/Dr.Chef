@@ -1,0 +1,40 @@
+.meals {
+  width: 90%;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 5rem;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+  animation: fadeIn 0.9s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 720px) {
+  .meals {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 2rem 0 0 7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .meals {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    width: 32rem;
+    margin: 2rem 0 0 6rem;
+  }
+}

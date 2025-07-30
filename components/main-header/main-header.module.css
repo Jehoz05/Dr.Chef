@@ -1,0 +1,108 @@
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  background: rgba(30, 30, 30, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  /* backdrop-filter: blur(12px); */
+  /* -webkit-backdrop-filter: blur(12px); */
+  border-radius: 1rem;
+  margin: 3rem auto;
+  width: 95%;
+  max-width: 1200px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem 4rem;
+  }
+}
+
+.nav ul {
+  list-style: none;
+  margin-right: 3rem;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  text-decoration: none;
+  color: #f0e9df;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  background: linear-gradient(to right, #f9b331, #ff8a05);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+  position: absolute;
+  z-index: -1;
+  margin: -1.5rem 0 0 -8rem;
+
+  width: 10rem;
+  height: 10rem;
+
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.6rem rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05) rotate(3deg);
+}
+
+@media (max-width: 320px) {
+  .header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+
+    width: 45rem;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+  }
+  .logo img {
+    position: relative;
+    z-index: -1;
+    margin: 0;
+    width: 10rem;
+    height: 10rem;
+    padding: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.6rem rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease;
+  }
+  .nav ul {
+    list-style: none;
+
+    padding: 0;
+    display: flex;
+    gap: 1.75rem;
+    font-size: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+  }
+}
