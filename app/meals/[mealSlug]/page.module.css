@@ -125,6 +125,55 @@
     opacity: 0;
   }
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .image {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .header img {
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation: fade-slide-in-from-left 1s ease-out forwards;
+  }
+
+  .headerText {
+    padding: 0;
+    max-width: 90%;
+  }
+
+  .headerText h1 {
+    font-size: 2rem;
+  }
+
+  .creator {
+    font-size: 1.1rem;
+  }
+
+  .summary {
+    font-size: 1.1rem;
+  }
+
+  .instructions {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+
+  .loading {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 480px) {
   .headerText h1 {
     font-size: 1.8rem;
@@ -141,5 +190,9 @@
   .instructions {
     font-size: 1rem;
     padding: 1rem;
+  }
+
+  .loading {
+    font-size: 1.8rem;
   }
 }
