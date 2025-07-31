@@ -1,16 +1,12 @@
-const fs = require("fs");
-const path = require("path");
-const sql = require("better-sqlite3");
+import { createClient } from "@supabase/supabase-js";
+import dotenv from "dotenv";
 
-// Ensure the /data directory exists
-const dbDir = path.resolve(__dirname, "data");
-if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir, { recursive: true });
-}
+dotenv.config();
 
-// Define path for meals.db
-const dbPath = path.join(dbDir, "meals.db");
-const db = sql(dbPath);
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 const dummyMeals = [
   {
@@ -175,37 +171,14 @@ const dummyMeals = [
   },
 ];
 
-db.prepare(
-  `
-   CREATE TABLE IF NOT EXISTS meals (
-       id INTEGER PRIMARY KEY AUTOINCREMENT,
-       slug TEXT NOT NULL UNIQUE,
-       title TEXT NOT NULL,
-       image TEXT NOT NULL,
-       summary TEXT NOT NULL,
-       instructions TEXT NOT NULL,
-       creator TEXT NOT NULL,
-       creator_email TEXT NOT NULL
-    )
-`
-).run();
-
 async function initData() {
-  const stmt = db.prepare(`
-      INSERT INTO meals VALUES (
-         null,
-         @slug,
-         @title,
-         @image,
-         @summary,
-         @instructions,
-         @creator,
-         @creator_email
-      )
-   `);
-
   for (const meal of dummyMeals) {
-    stmt.run(meal);
+    const { error } = await supabase.from("meals").insert([meal]);
+    if (error) {
+      console.error(`❌ Error inserting meal "${meal.title}":`, error.message);
+    } else {
+      console.log(`✅ Inserted "${meal.title}"`);
+    }
   }
 }
 
