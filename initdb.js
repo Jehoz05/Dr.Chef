@@ -3,10 +3,14 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-);
+const supabaseUrl = "https://ozexrbsvumbsdsqvhbtk.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96ZXhyYnN2dW1ic2RzcXZoYnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5NjIwMTQsImV4cCI6MjA2OTUzODAxNH0.rmkXwlzr0dx0y3y4AitOwW4JlF5lhPBkui0HPAd15cg";
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// # Galaxy/.env.local
+// NEXT_PUBLIC_SUPABASE_URL= "https://ozexrbsvumbsdsqvhbtk.supabase.co"
+// NEXT_PUBLIC_SUPABASE_ANON_KEY= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96ZXhyYnN2dW1ic2RzcXZoYnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5NjIwMTQsImV4cCI6MjA2OTUzODAxNH0.rmkXwlzr0dx0y3y4AitOwW4JlF5lhPBkui0HPAd15cg"
 
 const dummyMeals = [
   {
