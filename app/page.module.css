@@ -89,15 +89,15 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 0 0 2rem 11rem;
-    width: 90%;
+    margin: 0 auto;
+    width: 95%;
     text-align: center;
   }
 
   .slideshow {
     width: 100%;
     max-width: 20rem;
-    height: auto;
+    height: 12rem;
   }
 
   .hero {
@@ -121,18 +121,13 @@
     text-align: center;
   }
 
-  .section1 {
-    font-size: 1.1rem;
-    padding: 1rem;
-    margin: 24rem 0 0 3rem;
-    border: 2px solid aqua;
-    border-radius: 3rem;
-  }
+  .section1,
   .section2 {
     font-size: 1.1rem;
     padding: 1rem;
-    margin: 2rem 0 15rem 20rem;
+    margin: 2rem auto;
     border: 2px solid aqua;
-    border-radius: 3rem;
+    border-radius: 2rem;
+    width: 90%;
   }
 }

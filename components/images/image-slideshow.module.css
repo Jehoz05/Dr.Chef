@@ -27,15 +27,26 @@
 
 @media (max-width: 480px) {
   .slideshow {
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
+    width: 90%;
     height: 10rem;
-    max-width: 90%;
   }
 }
 
 @media (max-width: 360px) {
   .slideshow {
-    margin-top: 7rem;
+    margin-top: 6rem;
     height: 9rem;
+    width: 90%;
   }
 }
+
+@media (max-width: 320px) {
+  .slideshow {
+    margin-top: 5rem;
+    height: 8rem;
+    width: 90%;
+  }
+}
+
+/* Tablet and above */

@@ -42,24 +42,26 @@
   position: relative;
 }
 
+/* Small Tablets and Phones */
+@media (max-width: 768px) {
+  .link {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/*  Phones */
+@media (max-width: 480px) {
+  .link {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Very small devices (old phones, watches, etc.) */
 @media (max-width: 320px) {
   .link {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.5rem;
-    padding: 0;
-    color: #f0e6dc;
-    border-radius: 0.75rem;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .active {
-    background: linear-gradient(90deg, #ff8a05, #f9b331);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    position: relative;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
   }
 }
