@@ -1,5 +1,16 @@
+const fs = require("fs");
+const path = require("path");
 const sql = require("better-sqlite3");
-const db = sql("meals.db");
+
+// Ensure the /data directory exists
+const dbDir = path.resolve(__dirname, "data");
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
+// Define path for meals.db
+const dbPath = path.join(dbDir, "meals.db");
+const db = sql(dbPath);
 
 const dummyMeals = [
   {
